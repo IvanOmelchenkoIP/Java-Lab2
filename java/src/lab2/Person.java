@@ -11,7 +11,9 @@ public class Person {
 		phonenumber = pnumber;
 	}
 	
-	public void equals() {}
+	public boolean equals() {
+		return true;
+	}
 	
 	public void serialize() {}
 	
