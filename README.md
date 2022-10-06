@@ -11,6 +11,7 @@
 ## Текст завдання
 
 **Крок 1.** Реалізувати метод equals для класу Person у якого є декілька полів.
+
 **Крок 2.** Реалізуйте наступний сценарій:
 
 -   Створіть екземпляр Person
@@ -26,5 +27,7 @@
 ## Зовнішні посилання
 
 [JUnit5](https://junit.org/junit5/)
+
 [Gson](https://sites.google.com/site/gson/gson-user-guide)
+
 [Equals Verifier](https://github.com/jqno/equalsverifier)
