@@ -1,21 +1,36 @@
 package lab2;
 
-public class Person {
-	private String firstname;
-	private String lastname;
-	private String phonenumber;
+import java.util.Objects;
+
+public final class Person {
+	private final String firstname;
+	private final String lastname;
+	private final String phonenumber;
 	
 	Person(String fname, String lname, String pnumber) {
 		firstname = fname;
 		lastname = lname;
 		phonenumber = pnumber;
 	}
-	
-	public boolean equals() {
-		return true;
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(firstname, lastname, phonenumber);
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) return true;
+		if (obj == null || (getClass() != obj.getClass())) return false;
+		Person other = (Person) obj;
+		return Objects.equals(firstname, other.firstname) 
+				&& Objects.equals(lastname, other.lastname)
+				&& Objects.equals(phonenumber, other.phonenumber);
+	}
+
 	
-	public void serialize() {}
+
+	/*public void serialize() {}
 	
-	public void deserialize() {}
+	public void deserialize() {}*/
 }

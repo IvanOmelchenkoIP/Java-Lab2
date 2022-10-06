@@ -9,5 +9,7 @@
 	<classpathentry kind="lib" path="dependencies/gson-2.9.1.jar"/>
 	<classpathentry kind="lib" path="dependencies/equalsverifier-3.10.1.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="dependencies/byte-buddy-1.12.8.jar"/>
+	<classpathentry kind="lib" path="dependencies/objenesis-3.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

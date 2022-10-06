@@ -1,13 +1,13 @@
 package lab2;
 
+import org.junit.jupiter.api.*;
 import nl.jqno.equalsverifier.*;
-import org.junit.jupiter.api.Test;
 
-class PersonEqualsTest {
+public class PersonEqualsTest {
 
 	@Test
-	void TestPersonEquals() {
-		EqualsVerifier.forClass(Person.class).verify();
+	public void TestPersonEquals() {
+		EqualsVerifier.forClass(Person.class).usingGetClass().verify();
 	}
 
 }
