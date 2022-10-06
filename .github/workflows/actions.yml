@@ -21,5 +21,5 @@ jobs:
       - name: Test Equals
         working-directory: ./java
         run: |
-         javac -cp "./java/testing/junit-platform-console-standalone-1.9.0.jar;./java/dependencies/equalsverifier-3.10.1.jar" ./java/src/lab2/Person.java ./java/src/lab2/PersonEqualsTest.java
-         java -jar ./java/testing/junit-platform-console-standalone-1.9.0.jar -cp "./java/dependencies/byte-buddy-1.12.8.jar;./java/dependencies/objenesis-3.3.jar;./java/dependencies/equalsverifier-3.10.1.jar;./java/src" --select-class lab2.PersonEqualsTest
+         javac -cp "./testing/junit-platform-console-standalone-1.9.0.jar;./dependencies/equalsverifier-3.10.1.jar" ./src/lab2/Person.java ./src/lab2/PersonEqualsTest.java
+         java -jar ./testing/junit-platform-console-standalone-1.9.0.jar -cp "./dependencies/byte-buddy-1.12.8.jar;./dependencies/objenesis-3.3.jar;./dependencies/equalsverifier-3.10.1.jar;./src" --select-class lab2.PersonEqualsTest
