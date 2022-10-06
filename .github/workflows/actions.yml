@@ -1,0 +1,25 @@
+name: Build and Test
+
+on:
+ push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+  
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setupup Java JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Test Equals
+        working-directory: ./java
+        run: |
+         javac -cp "./java/testing/junit-platform-console-standalone-1.9.0.jar;./java/dependencies/equalsverifier-3.10.1.jar" ./java/src/lab2/Person.java ./java/src/lab2/PersonEqualsTest.java
+         java -jar ./java/testing/junit-platform-console-standalone-1.9.0.jar -cp "./java/src" --select-class lab2.PersonEqualsTest
