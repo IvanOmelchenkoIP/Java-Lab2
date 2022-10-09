@@ -39,6 +39,7 @@ public final class Person {
 		try {
 			Gson gson = new Gson();
 			person = gson.fromJson(json, Person.class);
+			System.out.println(person.serialize());
 		} catch (Exception ex) {
 			throw new IllegalArgumentException("JSON format must be the same as class Person fields.");
 		}

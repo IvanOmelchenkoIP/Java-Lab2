@@ -9,7 +9,7 @@ public class Main {
 		
 		System.out.printf("Serialized person1 object: %s\n", json);
 		System.out.printf("Serialized person2 object: %s\n", person2.serialize());
-		System.out.printf("Person 1 and Person 2 are equal: %b\n", person1.equals(person2));
+		System.out.printf("Person 1 and Person 2 are equal: %b\n", person1.equals(person2));		
 	}
 
 }

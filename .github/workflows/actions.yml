@@ -26,4 +26,4 @@ jobs:
         working-directory: ./java
         run: |
          javac -cp "./testing/junit-platform-console-standalone-1.9.0.jar:./dependencies/gson-2.9.1.jar:./dependencies/equalsverifier-3.10.1.jar" ./src/lab2/Person.java ./src/lab2/PersonEqualsTest.java
-         java -jar ./testing/junit-platform-console-standalone-1.9.0.jar -cp "./dependencies/byte-buddy-1.12.8.jar:./dependencies/objenesis-3.3.jar:./dependencies/equalsverifier-3.10.1.jar:./src" --select-class lab2.PersonEqualsTest
+         java -jar ./testing/junit-platform-console-standalone-1.9.0.jar -cp "./dependencies/byte-buddy-1.12.8.jar:./dependencies/objenesis-3.3.jar:./dependencies/equalsverifier-3.10.1.jar:./dependencies/gson-2.9.1.jar:./src" --select-class lab2.PersonEqualsTest
