@@ -1,9 +1,9 @@
 package lab2;
 
 import java.util.Objects;
-import com.google.gson.Gson;
 
 public final class Person {
+	
 	private final String firstname;
 	private final String lastname;
 	private final String phonenumber;
@@ -29,20 +29,4 @@ public final class Person {
 				&& Objects.equals(phonenumber, other.phonenumber);
 	}	
 
-	public String serialize() {
-		Gson gson = new Gson();
-		return gson.toJson(this);
-	}
-	
-	public static Person deserialize(String json) {
-		Person person;
-		try {
-			Gson gson = new Gson();
-			person = gson.fromJson(json, Person.class);
-			System.out.println(person.serialize());
-		} catch (Exception ex) {
-			throw new IllegalArgumentException("JSON format must be the same as class Person fields.");
-		}
-		return person;
-	}
 }
